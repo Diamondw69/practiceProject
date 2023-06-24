@@ -1,0 +1,131 @@
+body{
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fafafc;
+    font-family: 'SF Pro Display', sans-serif;
+  }
+  .container{
+    width: 100%;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+  .column{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 0 0 100%;
+    max-width: 100%;position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .logo img {
+    max-height: 50px;
+  }
+  .logo{
+    padding: 9.5px 0;
+    align-items: center;
+    display: flex;
+    color: #232323;
+  }
+  
+  .company-name span {
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 13px;
+    color: #22262f;
+    box-sizing: border-box;
+  }
+  
+  .language p {
+    margin: 0;
+    padding-right: 10px;
+  }
+  
+  .social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .social-media a {
+    display: inline-block;
+    margin-right: 10px;
+    background-color: transparent;
+  }
+  
+  .social-media i {
+    font-size: 20px;
+    color: black;
+  }
+  .phone-number{
+    margin-right: 10px;
+  }
+  .phone-number p {
+    font-size: 36px;
+    margin: 0;
+    color: #00cc00;
+  }
+  .phone{
+    font-size: 14px;
+    color: #252525;
+    margin: 0;
+    text-align: left;
+    display: flex;
+  }
+.phone-text span{
+    color: #1bbf19;
+}
+.main-header{
+    border-top: 1px white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.main-menu{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    font-weight: bold;
+    height: auto;
+    display: flex;
+    text-align: center;
+
+}
+.menu-item{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1 1 auto;
+    margin-right: 24px;
+    border-bottom: 3px solid #fff0;
+    transition: 0.13s ease;
+    margin-bottom: -1px;
+    flex-direction: column;
+    color: #232323;
+}
+.menu-item a{
+    text-decoration: none;
+    color: #232323
+}
+.second-header{
+    background-color: white;
+    border-bottom: 1px solid #e7e7ef;
+}
+

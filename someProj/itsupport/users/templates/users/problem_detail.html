@@ -1,0 +1,52 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/problem_detail.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="problem">
+        <h2>{{ problem.problem_description }}</h2>
+        <p>Тип проблемы: {{ problem.problem_type }}</p>
+        <p>Номер Этажа: {{ problem.floor }}</p>
+        <p>Номер кабинета: {{ problem.room_number }}</p>
+        <p>Было создано: {{ problem.created_at }}</p>
+      </div>
+        <hr>
+        <h4>Комментарии</h4>
+        {% for comment in problem.comments.all %}
+          <div class="comment">
+            <h6>{{ comment.author.username }} <small>{{ comment.created_date }}</small></h6>
+            <p>{{ comment.text }}</p>
+          </div>
+        {% empty %}
+          <p>Нет комментариев</p>
+        {% endfor %}
+        {% if user.is_authenticated %}
+          <form method="POST" action="{% url 'add_comment' problem.id %}">
+            {% csrf_token %}
+            <div class="form-group">
+              <label for="text">Добавить комментарий</label>
+              <textarea class="form-control" name="text" rows="6" cols="40" required ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </form>
+        {% else %}
+          <p>Please <a href="{% url 'login' %}">log in</a> to add comments.</p>
+        {% endif %}
+      </div>
+      <div class="col-md-8">
+        {% if report %}
+       <div class="report {% if report.status == 'resolved' %}report-status-resolved{% elif report.status == 'in_progress' %}report-status-in-progress{% elif report.status == 'not_resolved' %}report-status-not-resolved{% endif %}">
+        <h3>Отчет:</h3>
+        <p>Решение: {{ report.solution }}</p>
+        <p>Статус: {{ report.status }}</p>
+        <p>Заметки: {{ report.notes }}</p>
+       </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endblock %}

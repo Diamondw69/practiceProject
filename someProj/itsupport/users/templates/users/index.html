@@ -1,0 +1,31 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/index.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="container">
+    <div class="col">
+      <div class="main">
+        {% if user.is_authenticated %}
+        <h2>Добро пожаловать, {{ user.username }}!</h2>
+      {% else %}
+        <h2>Добро пожаловать в Центр помощи Сотрудникам!</h2>
+        {% endif %}
+        <p style="text-align: justify;">Представляем нашу новую платформу для сотрудников бизнеса! Как сотрудник наших компаний-партнеров, теперь вы можете легко сообщать о любых проблемах на рабочем месте и отслеживать их. Наша интуитивно понятная платформа позволяет вам быстро отправить отчет с подробной информацией, такой как тип проблемы, этаж и номер комнаты, а также описание проблемы.
+            Вы также можете отслеживать статус своего отчета, получать обновления от руководства и оставлять комментарии для дальнейшего обсуждения. Наша платформа предназначена для оптимизации процесса отчетности, гарантируя своевременное и эффективное решение проблем.
+            Присоединяйтесь к нашей платформе сегодня и возьмите под контроль рабочую среду!</p>
+        </div>
+      <div class="ros">
+        <div class="list-group">
+            <a href="/login" class="list-group-item actived">Авторизация</a>
+            <a href="/problems" class="list-group-item">Актуальные проблемы</a>
+            <a href="/problem" class="list-group-item ">Подать заявку</a>
+            <a href="/problems" class="list-group-item ">Все проблемы</a>
+            <a href="/problems" class="list-group-item ">Добавить комментарий</a>
+            <a href="/problems" class="list-group-item ">Отчеты</a>
+          </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

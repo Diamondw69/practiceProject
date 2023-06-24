@@ -1,0 +1,105 @@
+.problem-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .problem-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    
+    padding: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 70%;
+  }
+  
+  .problem-card-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .problem-date {
+    color: #aaa;
+    font-size: 14px;
+  }
+  
+  .problem-title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .problem-type {
+    background-color: #ddd;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+  
+  .problem-card-details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .problem-location {
+    color: #777;
+    font-size: 16px;
+  }
+  
+  .btn-solve-problem {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .btn-filter-problem {
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  a.problem-link {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  a.problem-link:hover {
+    text-decoration: underline;
+    color: #555;
+  }
+  
+  .problem-card.has-report {
+    background-color: #4CAF50;
+  }
+  .filter-form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .filter-form label {
+    margin-right: 10px;
+  }
+  
+  .filter-form select {
+    margin-right: 10px;
+  }

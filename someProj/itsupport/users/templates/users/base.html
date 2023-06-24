@@ -1,0 +1,72 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'users/main.css' %}">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="...">
+{% block css %}
+{% endblock %}
+<body>
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="column">
+         <div class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="Company Logo">
+          <div class="company-name">
+           <span>НАО «Государственная корпорация»</span>
+           <br>
+           <br>
+           <span>«Правительство для граждан»</span>
+       </div>
+    </div>
+    
+    <div class="language">
+      <select>
+        <option value="en">Рус</option>
+        <option value="es">Каз</option>
+      </select>
+    </div>
+    <div class="social-media">
+      <a href="https://www.instagram.com/gov4c.kz/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/gov4c"><i class="fab fa-facebook"></i></a>
+      <a href="https://t.me/gov4c_resmi"><i class="fab fa-telegram"></i></a>
+      <a href="https://twitter.com/gov4c"><i class="fab fa-twitter"></i></a>
+    </div>
+    <div class="phone">
+    <div class="phone-number">
+      <p>1414</p>
+    </div>
+    <div class="phone-text">
+      Единый контакт-центр
+      <br>
+      <span>(Звонок бесплатный)</span>                       
+    </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </header>
+  <header class="second-header">
+    <div class="container">
+      <div class="main-header">
+        <div class="main-menu">
+          <div class="menu-item">
+            <a href="/">
+            Центр    помощи
+          <span>Сотрудникам</span> 
+          </a>
+          </div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/about">О Корпорации</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/management">Корпоративное управление</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/services">Госуслуги</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/for-partners">Для партнеров</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/foreigners">Инструкция для Иммигрантов</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/press-center">Пресс-центр</a></div>
+          <div class="menu-item"><a href="https://gov4c.kz/ru/contacts">Контакты</a></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  {% block content %}
+    {% endblock %}
+</body>

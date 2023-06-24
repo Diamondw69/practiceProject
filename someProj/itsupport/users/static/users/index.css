@@ -1,0 +1,76 @@
+body{
+    font-family: 'SF Pro Display', sans-serif;
+    margin: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fafafc;
+    font-family: 'SF Pro Display', sans-serif;
+  }
+  .container{
+    width: 100%;
+  max-width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+  }
+  .ros{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    border-radius: 12px;
+    padding: 15px 10px;
+    list-style: none;
+  }
+  .col{
+display: flex;
+flex-direction: row;
+  }
+  .main{
+    background-color: #fafafc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 65%;
+  }
+  .list-group{
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafc;
+    border-radius: 5px;
+    background: #B7E8B8;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .list-group-item{
+    padding-top: 5px;
+    padding-bottom: 10px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    border-radius: 12px;
+  }
+  .list-group-item:hover{
+background:  #21dd1e;
+color: #FFFFFF;
+  }
+  .actived{
+    background: #1BBF19;
+    border-radius: 12px;
+    color: #FFFFFF;
+    padding: 10px;
+  }
+  p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 16px;
+    line-height: 150%;
+    color: #22262f;
+  }

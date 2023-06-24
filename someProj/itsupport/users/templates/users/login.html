@@ -1,0 +1,18 @@
+{% extends 'users/base.html' %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'users/login.css' %}">
+{% endblock %}
+{% block content %}
+<div class="main">
+  <div class="forms">
+  <h2>Авторизация</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Войти</button>
+  </form>
+  <h4>Нет аккаунта ?<a href="/register">Регистрация</a></h4>
+</div>
+</div>
+  {% endblock %}
